@@ -1,7 +1,7 @@
 /**  
  * @file    subarray.h
  * @brief   Simulate the basic sub-array
- * @author  Chenu Tang
+ * @author  Chenyu Tang
  * @version 0.1
  * @date    2022-11-28
  * @note    
