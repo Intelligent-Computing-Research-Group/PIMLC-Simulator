@@ -1,7 +1,7 @@
 /**  
  * @file    pimlcsim.cpp
  * @brief   simulation main
- * @author  Chenu Tang
+ * @author  Chenyu Tang
  * @version 1.0
  * @date    2023-02-09
  * @note    

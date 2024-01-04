@@ -1,7 +1,7 @@
 /**  
  * @file    common.h
  * @brief   Common definitions
- * @author  Chenu Tang
+ * @author  Chenyu Tang
  * @version 0.1
  * @date    2022-11-28
  * @note    
