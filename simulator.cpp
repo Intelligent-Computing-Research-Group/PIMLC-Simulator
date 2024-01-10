@@ -381,8 +381,8 @@ int Simulator::exec()
         for (int offset = 0; offset < meshcols; ++offset) {
             arrs[destarr+offset*meshrows].rows[destrow] = 
                 (arrs[src0arr+offset*meshrows].rows[src0row] & arrs[src1arr+offset*meshrows].rows[src1row]) | 
-                (arrs[src0arr+offset*meshrows].rows[src0row] & ~arrs[src2arr+offset*meshrows].rows[src2row]) | 
-                (arrs[src1arr+offset*meshrows].rows[src1row] & ~arrs[src2arr+offset*meshrows].rows[src2row]);
+                (arrs[src0arr+offset*meshrows].rows[src0row] & arrs[src2arr+offset*meshrows].rows[src2row]) | 
+                (arrs[src1arr+offset*meshrows].rows[src1row] & arrs[src2arr+offset*meshrows].rows[src2row]);
         }
         break;
     }
@@ -493,7 +493,7 @@ int Simulator::getInst(const char *str)
     int i;
     for (i = 0; i < sizeof(instname)/sizeof(const char* const); ++i) {
         len = strheadstr(p, instname[i]);
-        if (len > 0) {
+        if (len > 0 && (*(p+len)==' ' || *(p+len)=='\t')) {
             inst.op = (InstructionType)(i);
             break;
         }
