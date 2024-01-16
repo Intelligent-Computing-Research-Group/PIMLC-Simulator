@@ -14,6 +14,20 @@ y0,y1,y2,...,ym
 ```
 
 - Verilator
+
+
+```
+sudo apt-get install git help2man perl python3 make autoconf g++ flex bison ccache
+git clone https://github.com/verilator/verilator
+cd verilator
+git checkout v4.210
+autoconf
+./configure
+make    # make -j16
+sudo make install
+```
+
+
 In verilator test files, the input should be given in the following order:
 ```
 [x[k],...,x[3],x[2],x[1],x[0]] => [xn,xn-1,...,x4,x3,x2,x1,x0]

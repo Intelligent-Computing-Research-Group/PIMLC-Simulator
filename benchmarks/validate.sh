@@ -85,7 +85,7 @@ for bm in ${benchmarks[@]}; do
     ./genvtb.sh $bm $iodat
     verilator --cc $bm.v
     verilator -Wall --trace --cc ${bm}.v --exe tb_${bm}.cpp
-    make -C obj_dir/ -f V${bm}.mk V${bm}
+    make -j32 -C obj_dir/ -f V${bm}.mk V${bm}
     rm -f vrlt_${bm}_rst.txt
     ./obj_dir/V$bm $testdata $iodat > vrlt_${bm}_rst.txt
     cat vrlt_${bm}_rst.txt >> ${bm}_rst.txt
