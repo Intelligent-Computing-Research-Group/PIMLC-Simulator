@@ -17,7 +17,7 @@
 #define BUFSIZE 256
 #define SUBARRROWS 256
 #define SUBARRCOLS 256
-#define SUBARRNUM  64
+#define SUBARRNUM  128
 #define DEBUGMODE 0
 #define NORMALMODE 1
 
